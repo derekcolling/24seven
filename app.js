@@ -26,6 +26,7 @@ const scheduleList = document.getElementById('scheduleList');
 async function init() {
   await loadSchedule();
   loadMyDances();
+  setupFirebaseSync();
   renderCurrentDance();
   renderCountdowns();
   renderDanceChips();
@@ -65,6 +66,35 @@ function loadCurrentIndex() {
 
 function saveCurrentIndex() {
   localStorage.setItem('currentIndex', currentIndex.toString());
+  // Sync to Firebase for all users
+  if (window.db) {
+    window.db.ref('currentDance').set({
+      index: currentIndex,
+      updatedAt: Date.now()
+    });
+  }
+}
+
+// ===== Firebase Real-time Sync =====
+function setupFirebaseSync() {
+  if (!window.db) {
+    console.warn('Firebase not available, using local storage only');
+    return;
+  }
+
+  // Listen for changes from other users
+  window.db.ref('currentDance').on('value', (snapshot) => {
+    const data = snapshot.val();
+    if (data && typeof data.index === 'number') {
+      // Only update if different from current
+      if (data.index !== currentIndex && data.index >= 0 && data.index < schedule.length) {
+        currentIndex = data.index;
+        localStorage.setItem('currentIndex', currentIndex.toString());
+        renderCurrentDance();
+        renderCountdowns();
+      }
+    }
+  });
 }
 
 // ===== Render Current Dance =====

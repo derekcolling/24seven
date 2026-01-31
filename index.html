@@ -107,6 +107,24 @@
   </div>
 
 
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+  <script>
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCQdf27gdFlbL7M4_ZN4TVVwxAQq83lu_o",
+      authDomain: "seven-a8e57.firebaseapp.com",
+      databaseURL: "https://seven-a8e57-default-rtdb.firebaseio.com",
+      projectId: "seven-a8e57",
+      storageBucket: "seven-a8e57.firebasestorage.app",
+      messagingSenderId: "178805115631",
+      appId: "1:178805115631:web:95918d572bc55a4846e91a"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    window.db = firebase.database();
+  </script>
   <script src="app.js"></script>
 </body>
 
