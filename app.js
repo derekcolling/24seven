@@ -2,6 +2,7 @@
 let schedule = [];
 let currentIndex = 0;
 let myDances = [];
+let watchList = [];
 
 // ===== DOM Elements =====
 const currentNumber = document.getElementById('currentNumber');
@@ -26,6 +27,7 @@ const scheduleList = document.getElementById('scheduleList');
 async function init() {
   await loadSchedule();
   loadMyDances();
+  loadWatchList();
   setupFirebaseSync();
   renderCurrentDance();
   renderCountdowns();
@@ -54,6 +56,15 @@ function loadMyDances() {
 
 function saveMyDances() {
   localStorage.setItem('myDances', JSON.stringify(myDances));
+}
+
+function loadWatchList() {
+  const saved = localStorage.getItem('watchList');
+  watchList = saved ? JSON.parse(saved) : [];
+}
+
+function saveWatchList() {
+  localStorage.setItem('watchList', JSON.stringify(watchList));
 }
 
 function loadCurrentIndex() {
@@ -119,15 +130,27 @@ function renderCountdowns() {
   const upcomingMyDances = myDances
     .map(entry => {
       const index = schedule.findIndex(d => d.entry === entry);
-      return { entry, index };
+      return { entry, index, type: 'myDancer' };
     })
     .filter(d => d.index > currentIndex)
     .sort((a, b) => a.index - b.index);
 
-  if (upcomingMyDances.length === 0) {
+  // Find watched dances that are after the current dance
+  const upcomingWatchDances = watchList
+    .map(entry => {
+      const index = schedule.findIndex(d => d.entry === entry);
+      return { entry, index, type: 'watch' };
+    })
+    .filter(d => d.index > currentIndex)
+    .sort((a, b) => a.index - b.index);
+
+  const hasNoDances = upcomingMyDances.length === 0 && upcomingWatchDances.length === 0;
+  const hasNoSavedDances = myDances.length === 0 && watchList.length === 0;
+
+  if (hasNoDances) {
     countdownCards.innerHTML = '';
-    emptyState.style.display = myDances.length === 0 ? 'block' : 'none';
-    if (myDances.length > 0) {
+    emptyState.style.display = hasNoSavedDances ? 'block' : 'none';
+    if (!hasNoSavedDances) {
       countdownCards.innerHTML = `
         <div class="empty-state">
           <p>All your dances are done! 🎉</p>
@@ -138,23 +161,56 @@ function renderCountdowns() {
   }
 
   emptyState.style.display = 'none';
-  countdownCards.innerHTML = upcomingMyDances.map((d, i) => {
-    const dance = schedule[d.index];
-    const dancesUntil = d.index - currentIndex;
-    const isNext = i === 0;
 
-    return `
-      <div class="countdown-card">
-        <div class="countdown-badge ${isNext ? 'next' : ''}">${dancesUntil}</div>
-        <div class="countdown-info">
-          <div class="countdown-label">${dancesUntil === 1 ? 'NEXT UP!' : `${dancesUntil} dances until`}</div>
-          <div class="countdown-entry">${dance.entry}</div>
-          <div class="countdown-title">${dance.title}</div>
+  let html = '';
+
+  // My Dancer dances
+  if (upcomingMyDances.length > 0) {
+    html += '<div class="countdown-section"><div class="countdown-section-label">💃 MY DANCER</div>';
+    html += upcomingMyDances.map((d, i) => {
+      const dance = schedule[d.index];
+      const dancesUntil = d.index - currentIndex;
+      const isNext = i === 0;
+
+      return `
+        <div class="countdown-card my-dancer">
+          <div class="countdown-badge ${isNext ? 'next' : ''}">${dancesUntil}</div>
+          <div class="countdown-info">
+            <div class="countdown-label">${dancesUntil === 1 ? 'NEXT UP!' : `${dancesUntil} dances until`}</div>
+            <div class="countdown-entry">${dance.entry}</div>
+            <div class="countdown-title">${dance.title}</div>
+          </div>
         </div>
-      </div>
-    `;
-  }).join('');
+      `;
+    }).join('');
+    html += '</div>';
+  }
+
+  // Watch list dances
+  if (upcomingWatchDances.length > 0) {
+    html += '<div class="countdown-section"><div class="countdown-section-label">👀 WATCHING</div>';
+    html += upcomingWatchDances.map((d, i) => {
+      const dance = schedule[d.index];
+      const dancesUntil = d.index - currentIndex;
+      const isFirst = i === 0;
+
+      return `
+        <div class="countdown-card watching">
+          <div class="countdown-badge watch ${isFirst ? 'next-watch' : ''}">${dancesUntil}</div>
+          <div class="countdown-info">
+            <div class="countdown-label">${dancesUntil === 1 ? 'COMING UP!' : `${dancesUntil} dances until`}</div>
+            <div class="countdown-entry">${dance.entry}</div>
+            <div class="countdown-title">${dance.title}</div>
+          </div>
+        </div>
+      `;
+    }).join('');
+    html += '</div>';
+  }
+
+  countdownCards.innerHTML = html;
 }
+
 
 // ===== Render Dance Chips (My Dances Modal) =====
 function renderDanceChips() {
@@ -174,19 +230,31 @@ function renderSchedule() {
     const isCurrent = index === currentIndex;
     const isPast = index < currentIndex;
     const isMyDance = myDances.includes(dance.entry);
+    const isWatching = watchList.includes(dance.entry);
 
     let classes = 'schedule-item';
     if (isCurrent) classes += ' current';
     if (isPast) classes += ' past';
     if (isMyDance) classes += ' my-dance';
+    if (isWatching) classes += ' watching';
 
     return `
-      <div class="${classes}">
-        <div class="schedule-time">${dance.time}</div>
-        <div class="schedule-entry">${dance.entry}</div>
-        <div class="schedule-details">
-          <div class="schedule-title">${dance.title}</div>
-          <div class="schedule-studio">${dance.studio}</div>
+      <div class="${classes}" data-entry="${dance.entry}">
+        <div class="schedule-main">
+          <div class="schedule-time">${dance.time}</div>
+          <div class="schedule-entry">${dance.entry}</div>
+          <div class="schedule-details">
+            <div class="schedule-title">${dance.title}</div>
+            <div class="schedule-studio">${dance.studio}</div>
+          </div>
+        </div>
+        <div class="schedule-actions">
+          <button class="schedule-action-btn my-dancer-btn ${isMyDance ? 'active' : ''}" data-entry="${dance.entry}" data-type="myDancer" title="My Dancer">
+            💃
+          </button>
+          <button class="schedule-action-btn watch-btn ${isWatching ? 'active' : ''}" data-entry="${dance.entry}" data-type="watch" title="Watch">
+            👀
+          </button>
         </div>
       </div>
     `;
@@ -200,6 +268,7 @@ function renderSchedule() {
     }
   }, 100);
 }
+
 
 // ===== Event Listeners =====
 function setupEventListeners() {
@@ -292,6 +361,46 @@ function setupEventListeners() {
   document.getElementById('closeSchedule').addEventListener('click', () => {
     scheduleModal.classList.remove('open');
   });
+
+  // Schedule Action Buttons (My Dancer / Watch)
+  scheduleList.addEventListener('click', (e) => {
+    const btn = e.target.closest('.schedule-action-btn');
+    if (!btn) return;
+
+    const entry = btn.dataset.entry;
+    const type = btn.dataset.type;
+
+    if (type === 'myDancer') {
+      if (myDances.includes(entry)) {
+        myDances = myDances.filter(d => d !== entry);
+        btn.classList.remove('active');
+      } else {
+        myDances.push(entry);
+        btn.classList.add('active');
+      }
+      saveMyDances();
+      renderCountdowns();
+
+      // Update my-dance class on the schedule item
+      const item = btn.closest('.schedule-item');
+      item.classList.toggle('my-dance', myDances.includes(entry));
+    } else if (type === 'watch') {
+      if (watchList.includes(entry)) {
+        watchList = watchList.filter(d => d !== entry);
+        btn.classList.remove('active');
+      } else {
+        watchList.push(entry);
+        btn.classList.add('active');
+      }
+      saveWatchList();
+      renderCountdowns();
+
+      // Update watching class on the schedule item
+      const item = btn.closest('.schedule-item');
+      item.classList.toggle('watching', watchList.includes(entry));
+    }
+  });
+
 
   // Close modals on backdrop click
   [myDancesModal, scheduleModal, jumpToModal].forEach(modal => {

@@ -233,6 +233,48 @@ body {
   font-weight: 600;
 }
 
+/* ===== Countdown Section Labels ===== */
+.countdown-section {
+  margin-bottom: 20px;
+}
+
+.countdown-section-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+/* ===== Watch List Styles ===== */
+.countdown-card.watching {
+  border-left-color: #4ecdc4;
+}
+
+.countdown-badge.watch {
+  background: #4ecdc4;
+  box-shadow: 0 4px 12px rgba(78, 205, 196, 0.4);
+}
+
+.countdown-badge.next-watch {
+  animation: pulseWatch 1.5s infinite;
+}
+
+@keyframes pulseWatch {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
 .empty-state {
   text-align: center;
   padding: 40px 20px;
@@ -409,9 +451,17 @@ body {
 .schedule-item {
   display: flex;
   align-items: center;
-  padding: 14px 20px;
+  padding: 14px 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  gap: 12px;
+  gap: 8px;
+}
+
+.schedule-main {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+  min-width: 0;
 }
 
 .schedule-item.current {
@@ -426,18 +476,23 @@ body {
   border-left: 3px solid var(--accent);
 }
 
+.schedule-item.watching {
+  border-left: 3px solid #4ecdc4;
+}
+
 .schedule-time {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
-  width: 60px;
+  width: 50px;
   flex-shrink: 0;
 }
 
 .schedule-entry {
   font-weight: 700;
   color: var(--accent);
-  width: 50px;
+  width: 45px;
   flex-shrink: 0;
+  font-size: 0.9rem;
 }
 
 .schedule-details {
@@ -446,7 +501,7 @@ body {
 }
 
 .schedule-title {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
@@ -454,9 +509,50 @@ body {
 }
 
 .schedule-studio {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
 }
+
+/* ===== Schedule Action Buttons ===== */
+.schedule-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.schedule-action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  opacity: 0.5;
+}
+
+.schedule-action-btn:active {
+  transform: scale(0.9);
+}
+
+.schedule-action-btn.my-dancer-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  opacity: 1;
+  box-shadow: 0 2px 8px var(--accent-glow);
+}
+
+.schedule-action-btn.watch-btn.active {
+  background: #4ecdc4;
+  border-color: #4ecdc4;
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(78, 205, 196, 0.4);
+}
+
 
 /* ===== Utility ===== */
 .sr-only {
