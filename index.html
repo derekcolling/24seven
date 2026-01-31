@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Dance Tracker</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <h1>🎀 Dance Tracker</h1>
+      <p class="event-name">24 Seven • Tulsa, OK</p>
+    </header>
+
+    <!-- Now On Stage Section -->
+    <section class="now-playing">
+      <div class="section-label">NOW ON STAGE <span class="tap-hint">(tap to change)</span></div>
+      <div class="current-dance-card" id="currentDanceCard" role="button" tabindex="0">
+        <div class="dance-number" id="currentNumber">#225</div>
+        <div class="dance-title" id="currentTitle">Oh Yeah</div>
+        <div class="dance-studio" id="currentStudio">Premier Dance</div>
+        <div class="dance-category" id="currentCategory">Teen Jazz Line</div>
+      </div>
+      <div class="nav-buttons">
+        <button class="nav-btn" id="prevBtn" aria-label="Previous dance">◀ Prev</button>
+        <button class="nav-btn" id="nextBtn" aria-label="Next dance">Next ▶</button>
+      </div>
+    </section>
+
+    <!-- Coming Up Section -->
+    <section class="coming-up" id="comingUpSection">
+      <div class="section-label">⏳ COMING UP</div>
+      <div class="countdown-cards" id="countdownCards">
+        <!-- Dynamically populated -->
+      </div>
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <p>No dances saved yet!</p>
+        <p>Tap the button below to add your dancer's numbers.</p>
+      </div>
+    </section>
+
+    <!-- Bottom Actions -->
+    <nav class="bottom-nav">
+      <button class="action-btn" id="scheduleBtn">📋 Schedule</button>
+      <button class="action-btn primary" id="myDancesBtn">💃 My Dances</button>
+    </nav>
+  </div>
+
+  <!-- Jump To Dance Modal -->
+  <div class="modal" id="jumpToModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Jump to Dance</h2>
+        <button class="close-btn" id="closeJumpTo">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="search-container">
+          <input type="text" id="jumpToInput" class="search-input" placeholder="Enter dance # (e.g. 250)"
+            inputmode="numeric" autocomplete="off">
+        </div>
+        <div class="jump-results" id="jumpResults">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Dances Modal -->
+  <div class="modal" id="myDancesModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>My Dances</h2>
+        <button class="close-btn" id="closeMyDances">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-instructions">Select your dancer's entry numbers:</p>
+        <div class="dance-chips" id="danceChips">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="save-btn" id="saveMyDances">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Schedule Modal -->
+  <div class="modal" id="scheduleModal">
+    <div class="modal-content full-height">
+      <div class="modal-header">
+        <h2>Full Schedule</h2>
+        <button class="close-btn" id="closeSchedule">✕</button>
+      </div>
+      <div class="modal-body schedule-list" id="scheduleList">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,730 @@
+[
+  {
+    "time": "7:30 AM",
+    "entry": "#225",
+    "title": "Oh Yeah",
+    "studio": "Premier Dance",
+    "category": "Teen Jazz Line"
+  },
+  {
+    "time": "7:33 AM",
+    "entry": "#226",
+    "title": "Diva",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Mini Hip-Hop Group"
+  },
+  {
+    "time": "7:36 AM",
+    "entry": "#227",
+    "title": "Crush On You",
+    "studio": "Premier Dance",
+    "category": "Mini Jazz Group"
+  },
+  {
+    "time": "7:37 AM",
+    "entry": "#227.a",
+    "title": "BITM",
+    "studio": "Elite Dance of Tulsa",
+    "category": "Senior Contemporary Line"
+  },
+  {
+    "time": "7:39 AM",
+    "entry": "#228",
+    "title": "Fever",
+    "studio": "South Tulsa Dance Co",
+    "category": "Teen Jazz Extended Line"
+  },
+  {
+    "time": "7:43 AM",
+    "entry": "#229",
+    "title": "Moulin Rouge",
+    "studio": "Premier Dance",
+    "category": "Senior Musical Theatre Line"
+  },
+  {
+    "time": "7:46 AM",
+    "entry": "#230",
+    "title": "Body Language",
+    "studio": "Pure Movement Dance",
+    "category": "Teen Jazz Extended Line"
+  },
+  {
+    "time": "7:50 AM",
+    "entry": "#231",
+    "title": "Happy Feet",
+    "studio": "Premier Dance",
+    "category": "Mini Tap Group"
+  },
+  {
+    "time": "7:53 AM",
+    "entry": "#232",
+    "title": "Bel-Air",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Mini Hip-Hop Extended Line"
+  },
+  {
+    "time": "7:56 AM",
+    "entry": "#233",
+    "title": "Bad Thing",
+    "studio": "Premier Dance",
+    "category": "Senior Jazz Group"
+  },
+  {
+    "time": "7:59 AM",
+    "entry": "#234",
+    "title": "Show Off",
+    "studio": "Theatre Arts",
+    "category": "Mini Musical Theatre Line"
+  },
+  {
+    "time": "8:02 AM",
+    "entry": "#235",
+    "title": "Tea Party",
+    "studio": "Premier Dance",
+    "category": "Mini Jazz Line"
+  },
+  {
+    "time": "8:05 AM",
+    "entry": "#236",
+    "title": "TimMix",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Teen Hip-Hop Production"
+  },
+  {
+    "time": "8:09 AM",
+    "entry": "#237",
+    "title": "Wooden Arms",
+    "studio": "Pure Movement Dance",
+    "category": "Senior Contemporary Group"
+  },
+  {
+    "time": "8:12 AM",
+    "entry": "#238",
+    "title": "Water From The Moon",
+    "studio": "Premier Dance",
+    "category": "Senior Lyrical Line"
+  },
+  {
+    "time": "8:15 AM",
+    "entry": "#239",
+    "title": "Where The Sea Becomes The Sky",
+    "studio": "South Tulsa Dance Co",
+    "category": "Teen Contemporary Group"
+  },
+  {
+    "time": "8:19 AM",
+    "entry": "#240",
+    "title": "Big Bad Wolf",
+    "studio": "Premier Dance",
+    "category": "Sidekick Specialty Line"
+  },
+  {
+    "time": "8:22 AM",
+    "entry": "#241",
+    "title": "Vogue",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Mini Jazz Group"
+  },
+  {
+    "time": "8:25 AM",
+    "entry": "#242",
+    "title": "Purple Hat",
+    "studio": "Premier Dance",
+    "category": "Teen Jazz Extended Line"
+  },
+  {
+    "time": "8:26 AM",
+    "entry": "#242.a",
+    "title": "Vogue",
+    "studio": "Premier Dance",
+    "category": "Mini Specialty Line"
+  },
+  {
+    "time": "8:29 AM",
+    "entry": "#243",
+    "title": "Apologize",
+    "studio": "Theatre Arts",
+    "category": "Teen Contemporary Line"
+  },
+  {
+    "time": "8:32 AM",
+    "entry": "#244",
+    "title": "Andy Griffith",
+    "studio": "Premier Dance",
+    "category": "Teen Musical Theatre Line"
+  },
+  {
+    "time": "8:35 AM",
+    "entry": "#245",
+    "title": "Cannock Chase",
+    "studio": "Pure Movement Dance",
+    "category": "Teen Contemporary Group"
+  },
+  {
+    "time": "8:38 AM",
+    "entry": "#246",
+    "title": "Canned Heat",
+    "studio": "Premier Dance",
+    "category": "Teen Specialty Line"
+  },
+  {
+    "time": "8:41 AM",
+    "entry": "#247",
+    "title": "Dancing In The Dark",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Senior Specialty Extended Line"
+  },
+  {
+    "time": "8:45 AM",
+    "entry": "#248",
+    "title": "The Journey",
+    "studio": "Premier Dance",
+    "category": "Mini Contemporary Group"
+  },
+  {
+    "time": "8:48 AM",
+    "entry": "#249",
+    "title": "Show Them What I've Got",
+    "studio": "Pure Movement Dance",
+    "category": "Mini Lyrical Line"
+  },
+  {
+    "time": "8:51 AM",
+    "entry": "#250",
+    "title": "Right About Now",
+    "studio": "Premier Dance",
+    "category": "Teen Jazz Line"
+  },
+  {
+    "time": "8:54 AM",
+    "entry": "#251",
+    "title": "Vogue",
+    "studio": "Theatre Arts",
+    "category": "Mini Jazz Line"
+  },
+  {
+    "time": "8:57 AM",
+    "entry": "#252",
+    "title": "Red Ribbon",
+    "studio": "Premier Dance",
+    "category": "Mini Lyrical Group"
+  },
+  {
+    "time": "9:00 AM",
+    "entry": "#253",
+    "title": "Get Back",
+    "studio": "Pure Movement Dance",
+    "category": "Senior Jazz Group"
+  },
+  {
+    "time": "9:03 AM",
+    "entry": "#254",
+    "title": "Die On This Hill",
+    "studio": "Premier Dance",
+    "category": "Senior Contemporary Group"
+  },
+  {
+    "time": "9:06 AM",
+    "entry": "#255",
+    "title": "Force In Flight",
+    "studio": "Theatre Arts",
+    "category": "Teen Ballet Group"
+  },
+  {
+    "time": "9:09 AM",
+    "entry": "#256",
+    "title": "Like Jennie",
+    "studio": "Premier Dance",
+    "category": "Teen Specialty Group"
+  },
+  {
+    "time": "9:12 AM",
+    "entry": "#257",
+    "title": "Synthetic Pulse",
+    "studio": "South Tulsa Dance Co",
+    "category": "Teen Contemporary Group"
+  },
+  {
+    "time": "9:16 AM",
+    "entry": "#258",
+    "title": "Mama Knows Best",
+    "studio": "Premier Dance",
+    "category": "Teen Jazz Group"
+  },
+  {
+    "time": "9:19 AM",
+    "entry": "#259",
+    "title": "MoneyTalks",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Mini Jazz Group"
+  },
+  {
+    "time": "9:23 AM",
+    "entry": "#260",
+    "title": "Puttin On The Ritz",
+    "studio": "Premier Dance",
+    "category": "Mini Musical Theatre Group"
+  },
+  {
+    "time": "9:26 AM",
+    "entry": "#261",
+    "title": "As Above, So Below",
+    "studio": "Central Oklahoma Dance Center",
+    "category": "Teen Contemporary Group"
+  },
+  {
+    "time": "9:29 AM",
+    "entry": "#262",
+    "title": "Ballad Of A Thin Man",
+    "studio": "Premier Dance",
+    "category": "Teen Contemporary Line"
+  },
+  {
+    "time": "9:32 AM",
+    "entry": "#263",
+    "title": "Born To Die",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Senior Lyrical Group"
+  },
+  {
+    "time": "9:35 AM",
+    "entry": "#264",
+    "title": "Telephone",
+    "studio": "Premier Dance",
+    "category": "Mini Specialty Group"
+  },
+  {
+    "time": "9:38 AM",
+    "entry": "#265",
+    "title": "Low Rider",
+    "studio": "Pure Movement Dance",
+    "category": "Mini Jazz Group"
+  },
+  {
+    "time": "9:44 AM",
+    "entry": "#267",
+    "title": "Vivaldi Concerto",
+    "studio": "Theatre Arts",
+    "category": "Mini Ballet Group"
+  },
+  {
+    "time": "9:47 AM",
+    "entry": "#268",
+    "title": "Watch This",
+    "studio": "Premier Dance",
+    "category": "Mini Jazz Group"
+  },
+  {
+    "time": "9:50 AM",
+    "entry": "Break",
+    "title": "10 Minute Break!",
+    "studio": "",
+    "category": ""
+  },
+  {
+    "time": "10:00 AM",
+    "entry": "#269",
+    "title": "Camera Rolling",
+    "studio": "South Tulsa Dance Co",
+    "category": "Mini Contemporary Group"
+  },
+  {
+    "time": "10:01 AM",
+    "entry": "#269.a",
+    "title": "Teach Me How to Shimmy",
+    "studio": "Premier Dance",
+    "category": "Mini Jazz Group"
+  },
+  {
+    "time": "10:03 AM",
+    "entry": "#270",
+    "title": "Candy Man",
+    "studio": "Premier Dance",
+    "category": "Senior Jazz Group"
+  },
+  {
+    "time": "10:06 AM",
+    "entry": "#271",
+    "title": "My Discarded Men",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Teen Musical Theatre Production"
+  },
+  {
+    "time": "10:09 AM",
+    "entry": "#272",
+    "title": "See You Again",
+    "studio": "Premier Dance",
+    "category": "Teen Lyrical Group"
+  },
+  {
+    "time": "10:12 AM",
+    "entry": "#273",
+    "title": "Soul Man",
+    "studio": "Theatre Arts",
+    "category": "Mini Tap Line"
+  },
+  {
+    "time": "10:15 AM",
+    "entry": "#274",
+    "title": "Snow Angels",
+    "studio": "Premier Dance",
+    "category": "Mini Lyrical Line"
+  },
+  {
+    "time": "10:18 AM",
+    "entry": "#275",
+    "title": "Time After Time",
+    "studio": "Pure Movement Dance",
+    "category": "Teen Tap Group"
+  },
+  {
+    "time": "10:21 AM",
+    "entry": "#276",
+    "title": "Dang",
+    "studio": "Premier Dance",
+    "category": "Teen Specialty Group"
+  },
+  {
+    "time": "10:24 AM",
+    "entry": "#277",
+    "title": "Ramalama",
+    "studio": "Theatre Arts",
+    "category": "Teen Specialty Group"
+  },
+  {
+    "time": "10:27 AM",
+    "entry": "#278",
+    "title": "I Feel Like Dancing",
+    "studio": "Premier Dance",
+    "category": "Teen Tap Group"
+  },
+  {
+    "time": "10:30 AM",
+    "entry": "#279",
+    "title": "Last Goodbye",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Mini Specialty Line"
+  },
+  {
+    "time": "10:33 AM",
+    "entry": "#280",
+    "title": "You Took My Look",
+    "studio": "Premier Dance",
+    "category": "Mini Jazz Group"
+  },
+  {
+    "time": "10:36 AM",
+    "entry": "#281",
+    "title": "Vouge",
+    "studio": "Central Oklahoma Dance Center",
+    "category": "Teen Jazz Group"
+  },
+  {
+    "time": "10:39 AM",
+    "entry": "#282",
+    "title": "Quake",
+    "studio": "Premier Dance",
+    "category": "Teen Specialty Line"
+  },
+  {
+    "time": "10:42 AM",
+    "entry": "#283",
+    "title": "We'll Be Here For It",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Senior Contemporary Line"
+  },
+  {
+    "time": "10:46 AM",
+    "entry": "#284",
+    "title": "Warrior",
+    "studio": "Premier Dance",
+    "category": "Teen Lyrical Line"
+  },
+  {
+    "time": "10:49 AM",
+    "entry": "#285",
+    "title": "El Tango",
+    "studio": "South Tulsa Dance Co",
+    "category": "Teen Ballet Group"
+  },
+  {
+    "time": "10:52 AM",
+    "entry": "#286",
+    "title": "Funky Monkey",
+    "studio": "Premier Dance",
+    "category": "Sidekick Jazz Line"
+  },
+  {
+    "time": "10:55 AM",
+    "entry": "#287",
+    "title": "Soaring",
+    "studio": "Pure Movement Dance",
+    "category": "Mini Contemporary Group"
+  },
+  {
+    "time": "10:58 AM",
+    "entry": "#288",
+    "title": "I'd Rather Go Blind",
+    "studio": "Premier Dance",
+    "category": "Teen Contemporary Group"
+  },
+  {
+    "time": "11:01 AM",
+    "entry": "#289",
+    "title": "Uno Otro",
+    "studio": "Theatre Arts",
+    "category": "Teen Jazz Line"
+  },
+  {
+    "time": "11:04 AM",
+    "entry": "#290",
+    "title": "Frozen Heart",
+    "studio": "Premier Dance",
+    "category": "Mini Specialty Group"
+  },
+  {
+    "time": "11:07 AM",
+    "entry": "#291",
+    "title": "Busta",
+    "studio": "Central Oklahoma Dance Center",
+    "category": "Teen Hip-Hop Line"
+  },
+  {
+    "time": "11:13 AM",
+    "entry": "#293",
+    "title": "Smiling Away",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Mini Lyrical Group"
+  },
+  {
+    "time": "11:16 AM",
+    "entry": "#294",
+    "title": "Call Me Back",
+    "studio": "Premier Dance",
+    "category": "Teen Musical Theatre Group"
+  },
+  {
+    "time": "11:19 AM",
+    "entry": "#295",
+    "title": "Send In The Clowns",
+    "studio": "Pure Movement Dance",
+    "category": "Senior Lyrical Line"
+  },
+  {
+    "time": "11:22 AM",
+    "entry": "#296",
+    "title": "Gossip",
+    "studio": "Premier Dance",
+    "category": "Teen Jazz Group"
+  },
+  {
+    "time": "11:25 AM",
+    "entry": "#297",
+    "title": "Try A Little Tenderness",
+    "studio": "South Tulsa Dance Co",
+    "category": "Teen Contemporary Line"
+  },
+  {
+    "time": "11:28 AM",
+    "entry": "#298",
+    "title": "You Raise Me Up",
+    "studio": "Premier Dance",
+    "category": "Mini Lyrical Group"
+  },
+  {
+    "time": "11:31 AM",
+    "entry": "#299",
+    "title": "Whistle",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Teen Specialty Line"
+  },
+  {
+    "time": "11:34 AM",
+    "entry": "#300",
+    "title": "Stop In Nevada",
+    "studio": "Premier Dance",
+    "category": "Teen Contemporary Group"
+  },
+  {
+    "time": "11:37 AM",
+    "entry": "#301",
+    "title": "I Look Fly, I Look Good",
+    "studio": "Central Oklahoma Dance Center",
+    "category": "Mini Hip-Hop Line"
+  },
+  {
+    "time": "11:40 AM",
+    "entry": "#302",
+    "title": "Samba",
+    "studio": "Premier Dance",
+    "category": "Teen Specialty Line"
+  },
+  {
+    "time": "11:44 AM",
+    "entry": "#303",
+    "title": "Dark Horse",
+    "studio": "Pure Movement Dance",
+    "category": "Teen Contemporary Line"
+  },
+  {
+    "time": "11:47 AM",
+    "entry": "#304",
+    "title": "Bad Guy",
+    "studio": "Premier Dance",
+    "category": "Mini Musical Theatre Line"
+  },
+  {
+    "time": "11:50 AM",
+    "entry": "#305",
+    "title": "You’ll Never Walk Alone",
+    "studio": "Theatre Arts",
+    "category": "Mini Contemporary Group"
+  },
+  {
+    "time": "11:53 AM",
+    "entry": "#306",
+    "title": "Bloodbag",
+    "studio": "Premier Dance",
+    "category": "Senior Contemporary Group"
+  },
+  {
+    "time": "11:56 AM",
+    "entry": "#307",
+    "title": "It Makes the World Go Round",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Mini Musical Theatre Extended Line"
+  },
+  {
+    "time": "12:01 PM",
+    "entry": "#308",
+    "title": "Troop Beverly Hills",
+    "studio": "Premier Dance",
+    "category": "Mini Musical Theatre Line"
+  },
+  {
+    "time": "12:04 PM",
+    "entry": "#309",
+    "title": "The Impossible Dream",
+    "studio": "Central Oklahoma Dance Center",
+    "category": "Mini Lyrical Line"
+  },
+  {
+    "time": "12:07 PM",
+    "entry": "#310",
+    "title": "The Chain",
+    "studio": "Premier Dance",
+    "category": "Senior Contemporary Group"
+  },
+  {
+    "time": "12:10 PM",
+    "entry": "#311",
+    "title": "It's My World",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Teen Specialty Line"
+  },
+  {
+    "time": "12:14 PM",
+    "entry": "#311",
+    "title": "She's In Love",
+    "studio": "Premier Dance",
+    "category": "Mini Musical Theatre Group"
+  },
+  {
+    "time": "12:17 PM",
+    "entry": "#313",
+    "title": "Is It Wrong",
+    "studio": "South Tulsa Dance Co",
+    "category": "Teen Hip-Hop Line"
+  },
+  {
+    "time": "12:20 PM",
+    "entry": "#314",
+    "title": "Sunday Kind Of Love",
+    "studio": "Premier Dance",
+    "category": "Teen Lyrical Group"
+  },
+  {
+    "time": "12:23 PM",
+    "entry": "#315",
+    "title": "Kokomo",
+    "studio": "Theatre Arts",
+    "category": "Sidekick Jazz Group"
+  },
+  {
+    "time": "12:26 PM",
+    "entry": "#316",
+    "title": "Out of This World",
+    "studio": "Premier Dance",
+    "category": "Mini Jazz Production"
+  },
+  {
+    "time": "12:31 PM",
+    "entry": "#317",
+    "title": "Jump",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Mini Jazz Extended Line"
+  },
+  {
+    "time": "12:36 PM",
+    "entry": "#318",
+    "title": "Up All Night",
+    "studio": "Premier Dance",
+    "category": "Teen Specialty Extended Line"
+  },
+  {
+    "time": "12:40 PM",
+    "entry": "#319",
+    "title": "Bobby McGee",
+    "studio": "Theatre Arts",
+    "category": "Teen Tap Line"
+  },
+  {
+    "time": "12:43 PM",
+    "entry": "#320",
+    "title": "Loathing",
+    "studio": "Premier Dance",
+    "category": "Teen Musical Theatre Group"
+  },
+  {
+    "time": "12:46 PM",
+    "entry": "#321",
+    "title": "Into The Woods",
+    "studio": "Pure Movement Dance",
+    "category": "Teen Musical Theatre Production"
+  },
+  {
+    "time": "12:54 PM",
+    "entry": "#322",
+    "title": "Pink Cadillac",
+    "studio": "Premier Dance",
+    "category": "Sidekick Jazz Group"
+  },
+  {
+    "time": "12:57 PM",
+    "entry": "#323",
+    "title": "Transitions",
+    "studio": "South Tulsa Dance Co",
+    "category": "Teen Contemporary Line"
+  },
+  {
+    "time": "1:03 PM",
+    "entry": "#324",
+    "title": "Woman",
+    "studio": "The Pointe Performing Arts Center",
+    "category": "Senior Jazz Production"
+  },
+  {
+    "time": "1:08 PM",
+    "entry": "#325",
+    "title": "Untamed",
+    "studio": "Premier Dance",
+    "category": "Teen Jazz Production"
+  },
+  {
+    "time": "1:13 PM",
+    "entry": "Awards",
+    "title": "ALL AWARDS #225-325!",
+    "studio": "",
+    "category": ""
+  }
+]
