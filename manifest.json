@@ -1,11 +1,11 @@
 {
-    "name": "Dance Tracker",
-    "short_name": "DanceTracker",
-    "description": "Track when your dancer is on stage",
+    "name": "24 Seven Dance Tracker",
+    "short_name": "24Seven",
+    "description": "Track when your dancer is on stage at 24 Seven competitions",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#1a1a2e",
-    "theme_color": "#1a1a2e",
+    "background_color": "#5CE1E6",
+    "theme_color": "#5CE1E6",
     "orientation": "portrait",
     "icons": [
         {

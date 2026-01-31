@@ -1,10 +1,11 @@
-const CACHE_NAME = 'dance-tracker-v1';
+const CACHE_NAME = 'dance-tracker-v2';
 const ASSETS = [
     '/',
     '/index.html',
     '/style.css',
     '/app.js',
     '/manifest.json',
+    '/images/logo.png',
     '/schedules/tulsa_saturday_2026.json'
 ];
 
