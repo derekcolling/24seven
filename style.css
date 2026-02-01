@@ -65,7 +65,7 @@ body {
 }
 
 .brand-logo {
-  height: 32px;
+  height: 64px;
   width: auto;
   margin-bottom: 8px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
