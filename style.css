@@ -55,18 +55,23 @@ body {
 /* ===== Header ===== */
 .header {
   text-align: center;
-  padding: 16px 0 24px;
+  padding: 20px 0 28px;
 }
 
 .header h1 {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .event-name {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
+  font-weight: 500;
 }
 
 /* ===== Section Labels ===== */
@@ -81,16 +86,25 @@ body {
 
 /* ===== Now Playing Section ===== */
 .now-playing {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .current-dance-card {
-  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+  background: linear-gradient(145deg, rgba(15, 52, 96, 0.9) 0%, rgba(22, 33, 62, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--border-radius);
-  padding: 24px;
+  padding: 28px 24px;
   text-align: center;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.current-dance-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .dance-number {
@@ -150,19 +164,21 @@ body {
 .countdown-cards {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .countdown-card {
-  background: var(--bg-secondary);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(22, 33, 62, 0.8) 100%);
   border-radius: var(--border-radius-sm);
-  padding: 16px 20px;
+  padding: 14px 18px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   border-left: 4px solid var(--accent);
   animation: slideIn 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 @keyframes slideIn {
   from {
@@ -294,32 +310,38 @@ body {
   display: flex;
   gap: 12px;
   padding: 16px;
-  background: linear-gradient(to top, var(--bg-primary) 80%, transparent);
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
+  background: linear-gradient(to top, var(--bg-primary) 85%, transparent);
   max-width: 480px;
   margin: 0 auto;
 }
 
 .action-btn {
   flex: 1;
-  padding: 16px;
-  font-size: 1rem;
+  padding: 18px 24px;
+  font-size: 1.1rem;
   font-weight: 600;
   background: var(--bg-secondary);
   color: var(--text-primary);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius);
   cursor: pointer;
   transition: all var(--transition);
 }
 
 .action-btn.primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, #c73e54 100%);
   border-color: var(--accent);
-  box-shadow: 0 4px 16px var(--accent-glow);
+  box-shadow: 0 4px 20px var(--accent-glow);
 }
 
-.action-btn:active {
+.action-btn.primary:active {
   transform: scale(0.97);
+  box-shadow: 0 2px 10px var(--accent-glow);
+}
+
+.action-btn.full-width {
+  width: 100%;
 }
 
 /* ===== Modal ===== */

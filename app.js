@@ -14,12 +14,10 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const countdownCards = document.getElementById('countdownCards');
 const emptyState = document.getElementById('emptyState');
-const myDancesModal = document.getElementById('myDancesModal');
 const scheduleModal = document.getElementById('scheduleModal');
 const jumpToModal = document.getElementById('jumpToModal');
 const jumpToInput = document.getElementById('jumpToInput');
 const jumpResults = document.getElementById('jumpResults');
-const danceChips = document.getElementById('danceChips');
 const scheduleList = document.getElementById('scheduleList');
 
 
@@ -31,7 +29,6 @@ async function init() {
   setupFirebaseSync();
   renderCurrentDance();
   renderCountdowns();
-  renderDanceChips();
   setupEventListeners();
   registerServiceWorker();
 }
@@ -322,36 +319,6 @@ function setupEventListeners() {
     jumpToModal.classList.remove('open');
   });
 
-  // My Dances Modal
-  document.getElementById('myDancesBtn').addEventListener('click', () => {
-    renderDanceChips();
-    myDancesModal.classList.add('open');
-  });
-
-  document.getElementById('closeMyDances').addEventListener('click', () => {
-    myDancesModal.classList.remove('open');
-  });
-
-  document.getElementById('saveMyDances').addEventListener('click', () => {
-    saveMyDances();
-    myDancesModal.classList.remove('open');
-    renderCountdowns();
-  });
-
-  // Dance Chip Selection
-  danceChips.addEventListener('click', (e) => {
-    if (e.target.classList.contains('dance-chip')) {
-      const entry = e.target.dataset.entry;
-      if (myDances.includes(entry)) {
-        myDances = myDances.filter(d => d !== entry);
-        e.target.classList.remove('selected');
-      } else {
-        myDances.push(entry);
-        e.target.classList.add('selected');
-      }
-    }
-  });
-
   // Schedule Modal
   document.getElementById('scheduleBtn').addEventListener('click', () => {
     renderSchedule();
@@ -403,7 +370,7 @@ function setupEventListeners() {
 
 
   // Close modals on backdrop click
-  [myDancesModal, scheduleModal, jumpToModal].forEach(modal => {
+  [scheduleModal, jumpToModal].forEach(modal => {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.classList.remove('open');

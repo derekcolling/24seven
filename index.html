@@ -43,15 +43,14 @@
         <!-- Dynamically populated -->
       </div>
       <div class="empty-state" id="emptyState" style="display: none;">
-        <p>No dances saved yet!</p>
-        <p>Tap the button below to add your dancer's numbers.</p>
+        <p>No dances tracked yet!</p>
+        <p>Tap Schedule below, then use 💃 and 👀 to track dances.</p>
       </div>
     </section>
 
     <!-- Bottom Actions -->
     <nav class="bottom-nav">
-      <button class="action-btn" id="scheduleBtn">📋 Schedule</button>
-      <button class="action-btn primary" id="myDancesBtn">💃 My Dances</button>
+      <button class="action-btn primary full-width" id="scheduleBtn">📋 View Schedule</button>
     </nav>
   </div>
 
@@ -74,24 +73,7 @@
     </div>
   </div>
 
-  <!-- My Dances Modal -->
-  <div class="modal" id="myDancesModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>My Dances</h2>
-        <button class="close-btn" id="closeMyDances">✕</button>
-      </div>
-      <div class="modal-body">
-        <p class="modal-instructions">Select your dancer's entry numbers:</p>
-        <div class="dance-chips" id="danceChips">
-          <!-- Dynamically populated -->
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button class="save-btn" id="saveMyDances">Done</button>
-      </div>
-    </div>
-  </div>
+
 
   <!-- Schedule Modal -->
   <div class="modal" id="scheduleModal">
