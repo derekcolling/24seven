@@ -31,26 +31,46 @@
         <div class="dance-category" id="currentCategory">Teen Jazz Line</div>
       </div>
       <div class="nav-buttons">
-        <button class="nav-btn" id="prevBtn" aria-label="Previous dance">◀ Prev</button>
-        <button class="nav-btn" id="nextBtn" aria-label="Next dance">Next ▶</button>
+        <button class="nav-btn" id="prevBtn" aria-label="Previous dance">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+        <button class="nav-btn" id="nextBtn" aria-label="Next dance">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
       </div>
     </section>
 
     <!-- Coming Up Section -->
     <section class="coming-up" id="comingUpSection">
-      <div class="section-label">⏳ COMING UP</div>
+      <div class="section-label">COMING UP</div>
       <div class="countdown-cards" id="countdownCards">
         <!-- Dynamically populated -->
       </div>
       <div class="empty-state" id="emptyState" style="display: none;">
         <p>No dances tracked yet!</p>
-        <p>Tap Schedule below, then use 💃 and 👀 to track dances.</p>
+        <p>Tap Schedule below to start tracking dances.</p>
       </div>
     </section>
 
     <!-- Bottom Actions -->
     <nav class="bottom-nav">
-      <button class="action-btn primary full-width" id="scheduleBtn">📋 View Schedule</button>
+      <button class="action-btn primary full-width" id="scheduleBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          style="margin-right: 8px; vertical-align: middle;">
+          <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+          <line x1="16" x2="16" y1="2" y2="6" />
+          <line x1="8" x2="8" y1="2" y2="6" />
+          <line x1="3" x2="21" y1="10" y2="10" />
+        </svg>
+        View Schedule
+      </button>
     </nav>
   </div>
 
@@ -60,7 +80,13 @@
       <div class="modal-drag-handle" id="jumpToModalHandle"></div>
       <div class="modal-header">
         <h2>Jump to Dance</h2>
-        <button class="close-btn" id="closeJumpTo">✕</button>
+        <button class="close-btn" id="closeJumpTo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
       </div>
       <div class="modal-body">
         <div class="search-container">
@@ -82,7 +108,13 @@
       <div class="modal-drag-handle" id="scheduleModalHandle"></div>
       <div class="modal-header">
         <h2>Full Schedule</h2>
-        <button class="close-btn" id="closeSchedule">✕</button>
+        <button class="close-btn" id="closeSchedule">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
       </div>
       <div class="modal-body schedule-list" id="scheduleList">
         <!-- Dynamically populated -->

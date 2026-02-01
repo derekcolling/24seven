@@ -173,6 +173,13 @@ body {
   transition: all var(--transition);
   touch-action: manipulation;
   box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn svg {
+  display: block;
 }
 
 .nav-btn:active {
@@ -362,6 +369,10 @@ body {
   border-radius: var(--border-radius-lg);
   cursor: pointer;
   transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .action-btn.primary {
@@ -608,12 +619,12 @@ body {
 }
 
 .schedule-action-btn {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.05);
   background: var(--bg-primary);
-  font-size: 1.1rem;
+  color: var(--text-secondary);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -621,6 +632,15 @@ body {
   transition: all var(--transition);
   opacity: 0.6;
   touch-action: manipulation;
+}
+
+.schedule-action-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.schedule-action-btn.active {
+  color: var(--primary);
 }
 
 .schedule-action-btn:active {

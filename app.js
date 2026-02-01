@@ -4,6 +4,17 @@ let currentIndex = 0;
 let myDances = [];
 let watchList = [];
 
+// ===== Icons (from better-icons) =====
+const icons = {
+  calendar: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>`,
+  sparkles: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>`,
+  eye: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>`,
+  chevronLeft: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>`,
+  chevronRight: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>`,
+  x: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>`,
+  plus: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>`
+};
+
 // ===== DOM Elements =====
 const currentNumber = document.getElementById('currentNumber');
 const currentTitle = document.getElementById('currentTitle');
@@ -163,7 +174,7 @@ function renderCountdowns() {
 
   // My Dancer dances
   if (upcomingMyDances.length > 0) {
-    html += '<div class="countdown-section"><div class="countdown-section-label">💃 MY DANCER</div>';
+    html += '<div class="countdown-section"><div class="countdown-section-label">MY DANCER</div>';
     html += upcomingMyDances.map((d, i) => {
       const dance = schedule[d.index];
       const dancesUntil = d.index - currentIndex;
@@ -185,7 +196,7 @@ function renderCountdowns() {
 
   // Watch list dances
   if (upcomingWatchDances.length > 0) {
-    html += '<div class="countdown-section"><div class="countdown-section-label">👀 WATCHING</div>';
+    html += '<div class="countdown-section"><div class="countdown-section-label">WATCHING</div>';
     html += upcomingWatchDances.map((d, i) => {
       const dance = schedule[d.index];
       const dancesUntil = d.index - currentIndex;
@@ -247,10 +258,10 @@ function renderSchedule() {
         </div>
         <div class="schedule-actions">
           <button class="schedule-action-btn my-dancer-btn ${isMyDance ? 'active' : ''}" data-entry="${dance.entry}" data-type="myDancer" title="My Dancer">
-            💃
+            ${icons.sparkles}
           </button>
           <button class="schedule-action-btn watch-btn ${isWatching ? 'active' : ''}" data-entry="${dance.entry}" data-type="watch" title="Watch">
-            👀
+            ${icons.eye}
           </button>
         </div>
       </div>
