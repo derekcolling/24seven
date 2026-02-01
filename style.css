@@ -1,21 +1,25 @@
-/* ===== CSS Variables ===== */
+/* ===== CSS Variables - 24 Seven Brand ===== */
 :root {
-  --bg-primary: #1a1a2e;
-  --bg-secondary: #16213e;
-  --bg-card: #0f3460;
-  --bg-modal: rgba(0, 0, 0, 0.85);
-  --accent: #e94560;
-  --accent-glow: rgba(233, 69, 96, 0.4);
+  --bg-primary: #1a0a2e;
+  --bg-secondary: #2d1b4e;
+  --bg-card: #3d2066;
+  --bg-modal: rgba(26, 10, 46, 0.95);
+  --accent: #00d4ff;
+  --accent-secondary: #c31c8b;
+  --accent-glow: rgba(0, 212, 255, 0.4);
+  --gradient-start: #00d4ff;
+  --gradient-end: #c31c8b;
   --text-primary: #ffffff;
-  --text-secondary: #a0a0b0;
-  --text-muted: #6c6c7c;
+  --text-secondary: #b8b8d0;
+  --text-muted: #7878a0;
   --success: #00d26a;
   --warning: #ffc107;
   --border-radius: 16px;
-  --border-radius-sm: 8px;
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --border-radius-sm: 10px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   --transition: 0.2s ease;
 }
+
 
 /* ===== Reset & Base ===== */
 *,
@@ -33,12 +37,14 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-  background: var(--bg-primary);
+  background: linear-gradient(180deg, #00b8d4 0%, #7b1fa2 50%, #4a148c 100%);
+  background-attachment: fixed;
   color: var(--text-primary);
   min-height: 100vh;
   min-height: 100dvh;
   overflow-x: hidden;
 }
+
 
 /* ===== App Container ===== */
 .app {
@@ -55,34 +61,33 @@ body {
 /* ===== Header ===== */
 .header {
   text-align: center;
-  padding: 20px 0 28px;
+  padding: 16px 0 24px;
 }
 
-.header h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 6px;
-  background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.brand-logo {
+  height: 32px;
+  width: auto;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .event-name {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 /* ===== Section Labels ===== */
 .section-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   margin-bottom: 12px;
 }
+
 
 /* ===== Now Playing Section ===== */
 .now-playing {
@@ -90,22 +95,23 @@ body {
 }
 
 .current-dance-card {
-  background: linear-gradient(145deg, rgba(15, 52, 96, 0.9) 0%, rgba(22, 33, 62, 0.9) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
   padding: 28px 24px;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .current-dance-card:active {
   transform: scale(0.98);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.15);
 }
+
 
 .dance-number {
   font-size: 2.5rem;
@@ -143,17 +149,17 @@ body {
   padding: 14px 20px;
   font-size: 1rem;
   font-weight: 600;
-  background: var(--bg-secondary);
+  background: rgba(255, 255, 255, 0.15);
   color: var(--text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--border-radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
   cursor: pointer;
   transition: all var(--transition);
 }
 
 .nav-btn:active {
   transform: scale(0.97);
-  background: var(--bg-card);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* ===== Coming Up Section ===== */
@@ -168,15 +174,18 @@ body {
 }
 
 .countdown-card {
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(22, 33, 62, 0.8) 100%);
-  border-radius: var(--border-radius-sm);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 14px;
   padding: 14px 18px;
   display: flex;
   align-items: center;
   gap: 14px;
   border-left: 4px solid var(--accent);
   animation: slideIn 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 
@@ -311,28 +320,30 @@ body {
   gap: 12px;
   padding: 16px;
   padding-bottom: max(16px, env(safe-area-inset-bottom));
-  background: linear-gradient(to top, var(--bg-primary) 85%, transparent);
+  background: linear-gradient(to top, rgba(74, 20, 140, 0.95) 70%, transparent);
   max-width: 480px;
   margin: 0 auto;
 }
 
 .action-btn {
   flex: 1;
-  padding: 18px 24px;
-  font-size: 1.1rem;
+  padding: 16px 24px;
+  font-size: 1rem;
   font-weight: 600;
-  background: var(--bg-secondary);
+  background: rgba(255, 255, 255, 0.15);
   color: var(--text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
   cursor: pointer;
   transition: all var(--transition);
 }
 
 .action-btn.primary {
-  background: linear-gradient(135deg, var(--accent) 0%, #c73e54 100%);
+  background: var(--accent);
   border-color: var(--accent);
   box-shadow: 0 4px 20px var(--accent-glow);
+  color: #1a0a2e;
+  font-weight: 700;
 }
 
 .action-btn.primary:active {
@@ -343,6 +354,7 @@ body {
 .action-btn.full-width {
   width: 100%;
 }
+
 
 /* ===== Modal ===== */
 .modal {
