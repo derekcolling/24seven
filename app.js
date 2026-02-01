@@ -329,6 +329,16 @@ function setupEventListeners() {
     scheduleModal.classList.remove('open');
   });
 
+  // Drag handle to close schedule modal
+  document.getElementById('scheduleModalHandle').addEventListener('click', () => {
+    scheduleModal.classList.remove('open');
+  });
+
+  // Drag handle to close jump to modal
+  document.getElementById('jumpToModalHandle').addEventListener('click', () => {
+    jumpToModal.classList.remove('open');
+  });
+
   // Schedule Action Buttons (My Dancer / Watch)
   scheduleList.addEventListener('click', (e) => {
     const btn = e.target.closest('.schedule-action-btn');
